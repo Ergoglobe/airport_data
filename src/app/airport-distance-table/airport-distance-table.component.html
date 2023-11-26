@@ -1,5 +1,5 @@
 <div class="mat-elevation-z8">
-  <table mat-table class="full-width-table" matSort aria-label="Elements" [dataSource]="airport_data">
+  <table mat-table class="full-width-table" matSort matSortActive="Distance" matSortDirection="asc" aria-label="Elements" [dataSource]="dataSource">
 
     <ng-container matColumnDef="LocID">
       <th mat-header-cell *matHeaderCellDef>ID</th>
@@ -30,10 +30,7 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
-  <mat-paginator #paginator
-      [length]="dataSource.data.length"
-      [pageIndex]="0"
-      [pageSize]="20"
+  <mat-paginator 
       [pageSizeOptions]="[10, 20, 40]"
       aria-label="Select page">
   </mat-paginator>

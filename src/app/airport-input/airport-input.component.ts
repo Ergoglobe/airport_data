@@ -102,7 +102,7 @@ export class AirportInputComponent {
     var m = ARP_coordinate.split( '-' )[1];
     var s = ARP_coordinate.split( '-' )[2];
 
-    var coordinate = parseFloat( h ) + parseFloat(m) / 60.0000 + parseFloat( s.slice(0, -1) ) / 3600.0000;
+    var coordinate = parseFloat(h) + parseFloat(m) / 60.0000 + parseFloat( s.slice(0, -1) ) / 3600.0000;
 
     if ( [ "N", "E" ].includes( ARP_coordinate.slice( -1 ) )) {
       return coordinate;
@@ -119,13 +119,13 @@ export class AirportInputComponent {
       var departure_lat_long = {latitude: this.convert_hms_to_coordinate(departure_airport["ARP Latitude"]), longitude:this.convert_hms_to_coordinate(departure_airport["ARP Longitude"]) };
       var destination_lat_long = {latitude: this.convert_hms_to_coordinate(destination_airport["ARP Latitude"]), longitude:this.convert_hms_to_coordinate(destination_airport["ARP Longitude"]) };
 
-      var distance = haversineDistance( departure_lat_long, destination_lat_long ) * 0.000539957; // meters to NM
+      var distance = parseFloat((haversineDistance( departure_lat_long, destination_lat_long ) * 0.000539957).toFixed(3)); // meters to NM
 
       return distance;
     } else {
       return 99999; // error
     }
-    
+
   }
 
 }

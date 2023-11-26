@@ -6,12 +6,14 @@ import { AirportInputComponent, Airport_Row } from './airport-input/airport-inpu
 
 import { AirportDistanceTableComponent } from "./airport-distance-table/airport-distance-table.component";
 
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, AirportInputComponent, AirportDistanceTableComponent]
+    imports: [CommonModule, RouterOutlet, AirportInputComponent, AirportDistanceTableComponent, MatToolbarModule]
 })
 
 export class AppComponent {
