@@ -33,6 +33,7 @@ export class AirportInputComponent {
   airport_table: Airport_Row[] = new Array<Airport_Row>();
   @Output() airport_table_event = new EventEmitter< Airport_Row[] >();
 
+
   ngOnInit(){
 
     for ( var airport of all_airport_data.Airports ){
