@@ -1,0 +1,22 @@
+
+<form>
+
+    <mat-form-field>
+        <mat-label>Select an Airport</mat-label>
+        <input type="text"
+            placeholder="Airport ID"
+            aria-label="Number"
+            matInput
+            [formControl]="airport_input_control"
+            [matAutocomplete]="auto">
+
+        <mat-autocomplete #auto="matAutocomplete" (optionSelected)='airport_selected( $event.option.value )' >
+            @for (airport_loc_id of filtered_airport_loc_ids| async; track airport_loc_id) {
+                <mat-option [value]="airport_loc_id">{{airport_loc_id}}</mat-option>
+            }
+        </mat-autocomplete>
+    
+    </mat-form-field>
+        
+</form>
+

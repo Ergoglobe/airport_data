@@ -1,0 +1,40 @@
+<div class="mat-elevation-z8">
+  <table mat-table class="full-width-table" matSort aria-label="Elements" [dataSource]="airport_data">
+
+    <ng-container matColumnDef="LocID">
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let row">{{row.LocID}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Distance">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Distance</th>
+      <td mat-cell *matCellDef="let row">{{row.Distance}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let row">{{row.Name}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="City">
+      <th mat-header-cell *matHeaderCellDef>City</th>
+      <td mat-cell *matCellDef="let row">{{row.City}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="StateID">
+      <th mat-header-cell *matHeaderCellDef>State</th>
+      <td mat-cell *matCellDef="let row">{{row.StateID}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator
+      [length]="dataSource.data.length"
+      [pageIndex]="0"
+      [pageSize]="20"
+      [pageSizeOptions]="[10, 20, 40]"
+      aria-label="Select page">
+  </mat-paginator>
+</div>
