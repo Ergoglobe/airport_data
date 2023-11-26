@@ -1,3 +1,22 @@
 .full-width-table {
   width: 100%;
 }
+
+a:link, a:visited {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 10vw;
+}
+
+a:hover, a:active {
+  background-color:crimson;
+}
+
+.mat-column-LocID {
+  word-break: break-word;
+  width: 10vw !important;
+}
