@@ -13,7 +13,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "https://ergoglobe.github.io/airport_data/browser/",
             "outputPath": "dist/airport_data",
             "index": "src/index.html",
             "browser": "src/main.ts",

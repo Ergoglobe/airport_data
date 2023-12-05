@@ -1,6 +1,7 @@
 <mat-toolbar><span>Airport Distances</span></mat-toolbar>
 
 <app-airport-input (airport_table_event)="receive_airport_table($event)"></app-airport-input>
-<app-airport-distance-table [airport_data]="airport_table"></app-airport-distance-table>
+
+<app-csv-data></app-csv-data>
 
 <router-outlet></router-outlet>

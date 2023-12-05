@@ -6,6 +6,8 @@ import { AirportInputComponent, Airport_Row } from './airport-input/airport-inpu
 
 import { AirportDistanceTableComponent } from "./airport-distance-table/airport-distance-table.component";
 
+import { CsvDataComponent } from './csv-data/csv-data.component';
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
@@ -13,7 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, AirportInputComponent, AirportDistanceTableComponent, MatToolbarModule]
+    imports: [CommonModule, RouterOutlet, AirportInputComponent, AirportDistanceTableComponent, MatToolbarModule, CsvDataComponent]
 })
 
 export class AppComponent {
